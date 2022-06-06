@@ -10,7 +10,6 @@ import page_object.DemoQaPracticeForm;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainTest {
-    private static final String GENDER = "#gender-radio-1";
 
     @BeforeAll
     public static void openBrowser() {
@@ -36,10 +35,12 @@ public class MainTest {
         practiceForm.selectSportsHobbies();
         practiceForm.selectReadingHobbies();
         practiceForm.selectMusicHobbies();
-        practiceForm.inputCurrentAddress("Kurchatova 2-21");
-
-//        $("#dateOfBirthInput").click(); // не работает
-//        practiceForm.clickSubmit();
+        practiceForm.inputCurrentAddress("Kurchatova 10-25");
+        practiceForm.uploadFile();
+        practiceForm.selectState("Rajasthan");
+        practiceForm.selectCity("Jaiselmer");
+        practiceForm.inputDateOfBirth("28", "July", "2022");
+        practiceForm.clickSubmit();
     }
 
 
