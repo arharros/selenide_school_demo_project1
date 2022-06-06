@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import page_object.DemoQaPracticeForm;
 
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainTest {
@@ -32,12 +31,16 @@ public class MainTest {
         practiceForm.inputFirstName("Ivan");
         practiceForm.inputLastName("Ivanov");
         practiceForm.inputUserEmail("ivanov@company.com");
-        practiceForm.selectMaleGender();
         practiceForm.inputMobileNumber("1234567891");
-//        practiceForm.inputSubjects("Maths");
+        practiceForm.selectMaleGender();
+        practiceForm.selectSportsHobbies();
+        practiceForm.selectReadingHobbies();
+        practiceForm.selectMusicHobbies();
+        practiceForm.inputCurrentAddress("Kurchatova 2-21");
 
-        $("#subjectsContainer").shouldBe(visible).click();
-
+//        $("#dateOfBirthInput").click(); // не работает
 //        practiceForm.clickSubmit();
     }
+
+
 }
