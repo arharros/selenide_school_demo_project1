@@ -1,7 +1,4 @@
-package page_object;
-
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
+package page_objects;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -111,7 +108,7 @@ public class DemoQaPracticeForm {
     }
 
     public void uploadFile() {
-        $(UPLOAD_FILE).uploadFromClasspath("summer.jpg");
+        $(UPLOAD_FILE).uploadFromClasspath("img/summer.jpg");
     }
 
     public void selectState(String state) {
